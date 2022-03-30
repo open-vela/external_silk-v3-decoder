@@ -16,7 +16,9 @@
 
 include $(APPDIR)/Make.defs
 
-CSRCS += $(wildcard silk/src/*.c)
+CSRCS  += $(wildcard silk/src/*.c)
 CFLAGS += ${shell $(INCDIR) $(INCDIROPT) "$(CC)" silk/interface}
+
+CFLAGS += -DNO_ASM
 
 include $(APPDIR)/Application.mk
