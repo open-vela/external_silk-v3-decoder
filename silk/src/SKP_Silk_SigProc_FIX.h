@@ -65,11 +65,12 @@ extern "C"
 #		include "SKP_Silk_macros.h"
 #	endif
 #else
-#	define EMBEDDED_ARM 0
 #	include "SKP_Silk_macros.h"
 #endif
 
-
+#ifndef EMBEDDED_ARM
+#	define EMBEDDED_ARM 0
+#endif
 
 /********************************************************************/
 /*                    SIGNAL PROCESSING FUNCTIONS                   */
