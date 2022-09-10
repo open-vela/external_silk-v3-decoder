@@ -105,9 +105,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #elif defined (__ARM_ARCH_7A__)
 #define EMBEDDED_ARM 6
 #define EMBEDDED_ARMv6
-#else
-#define EMBEDDED_ARM 0
 #endif
+#endif
+
+#ifndef EMBEDDED_ARM
+#define EMBEDDED_ARM 0
 #endif
 
 #ifdef _WINRT
