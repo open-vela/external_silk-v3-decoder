@@ -48,7 +48,7 @@ void SKP_Silk_decoder_set_fs(
         }
         /* Reset part of the decoder state */
         SKP_memset( psDec->sLPC_Q14,     0, MAX_LPC_ORDER    * sizeof( SKP_int32 ) );
-        SKP_memset( psDec->outBuf,       0, MAX_FRAME_LENGTH * sizeof( SKP_int16 ) );
+        SKP_memset( psDec->outBuf,       0, sizeof( psDec->outBuf) );
         SKP_memset( psDec->prevNLSF_Q15, 0, MAX_LPC_ORDER    * sizeof( SKP_int )   );
 
         psDec->lagPrev                 = 100;
