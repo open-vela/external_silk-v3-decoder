@@ -63,7 +63,7 @@ void SKP_Silk_NLSF2A(
 )
 {
     SKP_int k, i, dd;
-    SKP_int32 cos_LSF_Q20[SKP_Silk_MAX_ORDER_LPC];
+    SKP_int32 cos_LSF_Q20[SKP_Silk_MAX_ORDER_LPC] = {0};
     SKP_int32 P[SKP_Silk_MAX_ORDER_LPC/2+1], Q[SKP_Silk_MAX_ORDER_LPC/2+1];
     SKP_int32 Ptmp, Qtmp;
     SKP_int32 f_int;
